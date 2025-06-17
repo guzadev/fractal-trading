@@ -12,6 +12,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
+        gruppo: ['Gruppo', 'cursive'], 
       },
       colors: {
         background: 'hsl(var(--background))',

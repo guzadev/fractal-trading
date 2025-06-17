@@ -58,11 +58,11 @@ const nav = {
 };
 
 const hero = {
-  headline: { en: "Engineering for ICT-Based Trading", es: "Ingeniería aplicada al Trading ICT" },
-  subheadline: { en: "Built by Fractal", es: "Desarrollado por Fractal" },
+  headline: { en: "Trading Engineering", es: "Ingeniería del Trading" },
+  subheadline: { en: "Our practical approach to the ICT methodology", es: "Nuestra visión práctica del método ICT" },
   description: {
-    en: "We build simple and efficient systems for operating in the forex market, based on the ICT methodology. Our focus: the EUR/USD pair.",
-    es: "Diseñamos sistemas simples y eficientes para operar en el mercado forex, basados en la metodología ICT. Nos enfocamos en el par EUR/USD.",
+    en: "A new way to understand trading with ICT: simple, structured, and focused on EUR/USD.",
+    es: "Una nueva forma de entender el trading con ICT: simple, estructurada y enfocada en el EUR/USD.",
   },
   cta1: { en: "Contact Us", es: "Contactanos" },
   cta2: { en: "Coming Soon", es: "Próximamente" },
@@ -78,8 +78,8 @@ const about = {
   team: {
     title: { en: "The Team", es: "El Equipo" },
     description: {
-      en: "Two professionals committed to excellence in trading education and automation.",
-      es: "Dos profesionales comprometidos con la excelencia en educación y automatización del trading.",
+      en: "We focus on teaching and building tools that enhance your trading performance day by day.",
+      es: "Nos enfocamos en enseñar y construir herramientas que potencien tu operativa día a día.",
     },
     trader1: { en: "Leandro Lozano", es: "Leandro Lozano" },
     role1: { en: "Co-Fundador/ Trader", es: "Co-Fundador/ Trader" },
@@ -127,8 +127,8 @@ const products = {
     {
       title: { en: "Professional Trading Courses", es: "Cursos Profesionales" },
       description: {
-        en: "Learn with our comprehensive courses designed for serious traders.",
-        es: "Accede a nuestros cursos integrales diseñados para traders serios.",
+        en: "Practical and comprehensive training to improve your trading.",
+        es: "Formación práctica y completa para mejorar tu operativa.",
       },
     },
   ],
