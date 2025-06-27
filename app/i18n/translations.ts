@@ -59,10 +59,10 @@ const nav = {
 
 const hero = {
   headline: { en: "Trading Engineering", es: "Ingeniería del Trading" },
-  subheadline: { en: "Our practical approach to the ICT methodology", es: "Nuestra visión práctica del método ICT" },
+  subheadline: { en: "Our practical approach to the ICT methodology", es: "Nuestra visión práctica de la metodología ICT" },
   description: {
-    en: "A new way to understand trading with ICT: simple, structured, and focused on EUR/USD.",
-    es: "Una nueva forma de entender el trading con ICT: simple, estructurada y enfocada en el EUR/USD.",
+    en: "A new way to understand trading with ICT: simple, structured, and focused on the Forex Market.",
+    es: "Una nueva forma de entender el trading con ICT: simple, estructurada y enfocada en el Mercado de Forex.",
   },
   cta1: { en: "Contact Us", es: "Contactanos" },
   cta2: { en: "Coming Soon", es: "Próximamente" },
@@ -72,8 +72,8 @@ const about = {
   title: { en: "About us", es: "Acerca de nosotros" },
   subtitle: { en: "We apply logical thinking, structure, and real experience to market analysis.", es: "Aplicamos pensamiento lógico, estructura y experiencia real al análisis de mercados." },
   description: {
-    en: "Fractal Trading was born from the collaboration of two engineers passionate about trading. With a focus on the EUR/USD pair, we build clear and efficient systems based on years of experience, data analysis, and one simple principle: in trading, less is more.",
-    es: "Fractal Trading nace del encuentro entre dos ingenieros apasionados por el trading. Con un enfoque centrado en el par EUR/USD, diseñamos sistemas claros y eficientes basados en años de experiencia, análisis de datos y una premisa simple: en trading, menos es más.",
+    en: "Fractal Trading was born from the collaboration of two engineers passionate about trading. With a focus on With a focus on ICT methodology and Smart Money, we build clear and efficient systems based on years of experience, data analysis, and one simple principle: in trading, less is more.",
+    es: "Fractal Trading nace del encuentro entre dos ingenieros apasionados por el trading. Con un enfoque centrado en la metodología ICT y Smart Money, diseñamos sistemas claros y eficientes basados en años de experiencia, análisis de datos y una premisa simple: en trading, menos es más.",
   },
   team: {
     title: { en: "The Team", es: "El Equipo" },

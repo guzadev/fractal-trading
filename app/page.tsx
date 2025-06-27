@@ -13,16 +13,33 @@ export default function FractalTradingLanding() {
   const [language, setLanguage] = useState<Language>("es");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  
 
   const t = translations[language];
 
   const toggleLanguage = () => setLanguage(language === "en" ? "es" : "en");
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({ name: "", email: "", message: "" });
+  
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+  
+      if (response.ok) {
+        alert("Mensaje enviado con éxito.");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Error al enviar el mensaje.");
+      }
+    } catch (error) {
+      alert("Error de conexión.");
+    }
   };
+  
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -241,25 +258,41 @@ export default function FractalTradingLanding() {
       {/* Footer */}
       <footer className="bg-gradient-to-br from-[#0D1B2A] via-[#1a2332] to-black text-white py-12 text-center">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <TrendingUp className="h-8 w-8 text-white" />
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            
+            {/* Logo + Nombre */}
+            <a href="#home" className="flex items-center space-x-3 mb-4 md:mb-0">
+              <div className="w-10 h-10 bg-[#0D1B2A] rounded-full flex items-center justify-center shadow-md overflow-hidden">
+                <img
+                  src="/ft.png"
+                  alt="Fractal Trading Logo"
+                  className="w-full h-full object-cover scale-150 -translate-y-1"
+                />
+              </div>
               <span className="text-2xl font-gruppo font-semibold tracking-wide text-white">Fractal Trading</span>
+            </a>
 
+
+            {/* Descripción */}
+            <p className="text-gray-400 text-sm">{t.footer.description}</p>
+
+            {/* Íconos + Copyright */}
+            <div className="flex flex-col items-center gap-2 md:flex-row md:gap-3">
+              <p className="text-xs text-white">{t.footer.copyright}</p>
+              <div className="flex space-x-4">
+                <a href="https://gustavopaz.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Sitio web">
+                  <Globe className="h-4 w-4 hover:text-white" />
+                </a>
+                <a href="https://github.com/guzadev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <Github className="h-4 w-4 hover:text-white" />
+                </a>
+              </div>
             </div>
-            <p className="text-gray-400">{t.footer.description}</p>
-            <p className="text-xs text-white mt-2 flex items-center gap-3">
-              {t.footer.copyright}
-              <a href="https://gustavopaz.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Sitio web">
-                <Globe className="h-4 w-4 hover:text-white" />
-              </a>
-              <a href="https://github.com/guzadev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <Github className="h-4 w-4 hover:text-white" />
-              </a>
-            </p>
+
           </div>
         </div>
       </footer>
+
 
     </div>
   );
